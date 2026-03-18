@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autocorretor PT-BR Local</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Autocorretor PT-BR</h1>
+        <p>Digite normalmente. O texto sera corrigido automaticamente.</p>
+      </header>
+
+      <section class="editor-wrap">
+        <label for="editor">Texto</label>
+        <textarea id="editor" spellcheck="false" placeholder="Digite aqui..."></textarea>
+      </section>
+
+      <section class="controls">
+        <div class="status" id="status">Pronto</div>
+        <label class="toggle">
+          <input type="checkbox" id="autoPunctuation" checked />
+          Auto pontuacao
+        </label>
+        <button id="copyBtn" type="button">Copiar texto</button>
+      </section>
+
+      <section class="changes">
+        <h2>Ultimas correcoes</h2>
+        <ul id="changesList"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

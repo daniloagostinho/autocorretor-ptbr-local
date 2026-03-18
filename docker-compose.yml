@@ -1,0 +1,11 @@
+services:
+  languagetool:
+    image: silviof/docker-languagetool:latest
+    container_name: languagetool-ptbr-local
+    ports:
+      - "8010:8010"
+    environment:
+      - langtool_languageModel=/ngrams
+      - Java_Xms=256m
+      - Java_Xmx=512m
+    restart: unless-stopped
